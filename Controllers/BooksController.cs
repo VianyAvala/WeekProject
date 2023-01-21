@@ -91,45 +91,12 @@ namespace WeekProject.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult Update(int id)
+        public ActionResult Update()
         {
-            var Books = _context.Books.FirstOrDefault(B => B.Id == id);
-            if (Books != null)
-
-            {
-                var categories = _context.Categories.ToList();
-                ViewBag.Categories = categories;
-                return View(Books);
-            }
-            return HttpNotFound("Books  doesn't exists");
-        }
-
-        [HttpPost]
-
-        public ActionResult Update(Book Books)
-        {
-            if (Books != null)
-            {
-                var BookInDb = _context.Books.Find(Books.Id);
-                if (BookInDb != null)
-                {
-                    BookInDb.Price = Books.Price;
-                    BookInDb.BookName = Books.BookName;
-                    BookInDb.BookType = Books.BookType;
-                    BookInDb.Description = Books.Description;
-
-                    _context.SaveChanges();
-
-                }
-                return RedirectToAction("Index");
-
-
-            }
-            var categories = _context.Categories.ToList();
-            ViewBag.Categories = categories;
+            var Books = _context.Books.ToList();
             return View(Books);
         }
+
 
     }
 }
