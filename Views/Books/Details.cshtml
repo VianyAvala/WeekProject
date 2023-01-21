@@ -1,0 +1,36 @@
+﻿@using WeekProject.Models
+@model Book
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details of Books</h2>
+
+
+<hr />
+
+
+<div class="row">
+    <div class="col-md-3">
+        <ul class="list-group">
+            <li class="list-group-item"><b>Book Id :</b>@Model.Id</li>
+            <li class="list-group-item"><b>BookName Name :</b>@Model.BookName</li>
+            <li class="list-group-item"><b>ISBN :</b>@Model.ISBN</li>
+            <li class="list-group-item"><b>AuthorName :</b>@Model.AuthorName</li>
+            <li class="list-group-item"><b>Publisher :</b>@Model.Publisher</li>
+            <li class="list-group-item"><b>BookType :</b>@Model.BookType</li>
+            <li class="list-group-item"><b>Descritpion :</b>@Model.Description</li>
+            <li class="list-group-item"><b>Price :</b>@Model.Price</li>
+            <li class="list-group-item"><b>PublishedDate :</b>@Model.PublishedDate</li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        @Html.ActionLink("Back to Index", "Index", "Books");
+    </div>
+</div>
+
+

@@ -1,0 +1,40 @@
+﻿@using WeekProject.Models
+@model Book
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<hr />
+@using (Html.BeginForm())
+{
+    <div class="mb-2">
+        @Html.LabelFor(B => B.BookName, new { @class = "form-label" })
+        @Html.TextBoxFor(B => B.BookName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(B => B.BookName)
+    </div>
+    <div class="mb-2">
+        @Html.LabelFor(B => B.Price, new { @class = "form-label" })
+        @Html.TextBoxFor(B => B.Price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(B => B.Price)
+    </div>
+    <div class="mb-2">
+        @Html.LabelFor(B => B.Description, new { @class = "form-label" })
+        @Html.TextBoxFor(B => B.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Description)
+    </div>
+    <div class="mb-2">
+        @Html.LabelFor(B => B.CategoryId, new { @class = "form-label" })
+        @*@Html.TextBoxFor(p => p.CategoryId, new { @class = "form-control" })*@
+        @Html.DropDownListFor(B => B.CategoryId, new SelectList(ViewBag.Categories, "Id", "CategoryName"), "--Select--", new { @class = "form-select" })
+        @Html.ValidationMessageFor(B => B.CategoryId)
+    </div>
+
+    <div class="mt-2">
+        <input type="submit" id="btnSubmit" class="btn btn-primary" value="Update" />
+    </div>
+}
+
+
+
