@@ -97,6 +97,11 @@ namespace WeekProject.Controllers
             return View(Books);
         }
 
+        public ActionResult GetBooks()
+        {
+            var Books = _context.Books.ToList();
+            return View(Books);
+        }
 
     }
 }

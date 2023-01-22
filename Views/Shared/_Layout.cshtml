@@ -3,37 +3,38 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Online Book Store</title>
+    <link rel="icon" href="~/Logo/draw_svg20200611-27481-1wo16o4.svg.png"/>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
 
     @*<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            @Html.ActionLink("Online Book Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
+            <div class="container-fluid">
+                @Html.ActionLink("Online Book Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
 
-                    </li>
-                    <li class="nav-item">
-                        @Html.ActionLink("Index", "Index", "Books", null, new { @class = "nav-link" })
-                    </li>
-                    <li class="nav-item">
-                        @Html.ActionLink("Update", "Update", "Books", null, new { @class = "nav-link" })
-                    </li>
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Index", "Index", "Books", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Update", "Update", "Books", null, new { @class = "nav-link" })
+                        </li>
 
 
-                </ul>
+                    </ul>
 
+                </div>
             </div>
-        </div>
-    </nav>*@
+        </nav>*@
 
 
 
@@ -51,13 +52,17 @@
                         @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
 
                     </li>
+
+                    <li class="nav-item">
+                        @Html.ActionLink("GetBooks", "GetBooks", "Books", null, new { @class = "nav-link" })
+                    </li>
                     <li class="nav-item">
                         @Html.ActionLink("Index", "Index", "Books", null, new { @class = "nav-link" })
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Update", "Update", "Books", null, new { @class = "nav-link" })
                     </li>
-                  
+
 
                 </ul>
 
@@ -75,5 +80,6 @@
     @*@Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")*@
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/bootstrap.js"></script>
 </body>
 </html>

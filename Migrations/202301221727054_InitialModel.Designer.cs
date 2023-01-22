@@ -13,7 +13,7 @@ namespace WeekProject.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202301210942478_InitialModel"; }
+            get { return "202301221727054_InitialModel"; }
         }
         
         string IMigrationMetadata.Source

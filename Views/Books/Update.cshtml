@@ -24,12 +24,12 @@
 
             <td>@Html.ActionLink(B.BookName, "Details", "Books", new { id = B.Id }, null)</td>
             <td>@Html.ActionLink("Edit", "Edit", "Books", new { id = B.Id }, new { @class = "btn btn-outline-dark" })</td>
-            <td>
+            @*<td>
                 @using (Html.BeginForm("Delete", "Book", new { id = B.Id }, FormMethod.Post))
                 {
                     <button type="submit" class="btn btn-outline-danger">Delete</button>
                 }
-            </td>
+            </td>*@
 
 
         </tr>

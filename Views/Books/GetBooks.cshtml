@@ -1,0 +1,40 @@
+﻿@model List<WeekProject.Models.Book>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h2>List of Books</h2>
+
+
+<table class="table" align="center" border="1" w="50">
+    <tr>
+
+        @*<th>Id</th>*@
+        <th>Book Name</th>
+
+
+
+    </tr>
+
+    @foreach (var B in Model)
+    {
+        <tr>
+
+            @*<td>@B.Id</td>*@
+
+            <td>@Html.ActionLink(B.BookName, "Details", "Books", new { id = B.Id }, null)</td>
+            @*<td>@Html.ActionLink("Edit", "Edit", "Books", new { id = B.Id }, new { @class = "btn btn-info" })</td>
+                <td>
+                    @using (Html.BeginForm("Delete", "Book", new { id = B.Id }, FormMethod.Post))
+                    {
+                        <button type="submit" class=" btn btn-danger">Delete</button>
+                    }
+                </td>*@
+
+
+        </tr>
+    }
+</table>
+

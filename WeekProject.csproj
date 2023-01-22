@@ -132,9 +132,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202301210942478_InitialModel.cs" />
-    <Compile Include="Migrations\202301210942478_InitialModel.designer.cs">
-      <DependentUpon>202301210942478_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202301221727054_InitialModel.cs" />
+    <Compile Include="Migrations\202301221727054_InitialModel.designer.cs">
+      <DependentUpon>202301221727054_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -163,6 +163,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Logo\draw_svg20200611-27481-1wo16o4.svg.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -220,6 +221,7 @@
     <Content Include="Views\Books\Details.cshtml" />
     <Content Include="Views\Books\Edit.cshtml" />
     <Content Include="Views\Books\Update.cshtml" />
+    <Content Include="Views\Books\GetBooks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -230,8 +232,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202301210942478_InitialModel.resx">
-      <DependentUpon>202301210942478_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202301221727054_InitialModel.resx">
+      <DependentUpon>202301221727054_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
